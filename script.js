@@ -17,6 +17,8 @@ form.addEventListener("submit", (e) => {
   input_box.focus();
 });
 
+window.onload(input_box.focus());
+
 function botReply(message) {
   message_container.innerHTML += `<div class="bot">${message}</div>`;
 }
@@ -40,4 +42,44 @@ function botReady() {
 
 function botNotReady(err) {
   console.log("An error has occurred.", err);
+}
+
+
+function teaSelectLukewarm() {
+  console.log("tea temperature selected as Lukewarm");
+  input_box.focus();
+  document.body.style.backgroundImage = 'url("./assets/Background-01.png")';
+  bot.reply("local-user", 'lukewarm')
+    .then(function (reply) {
+      botReply(reply);
+    })
+    .then(function () {
+      message_container.lastElementChild.scrollIntoView();
+    });
+}
+
+function teaSelectHot() {
+  console.log("tea temperature selected as Hot");
+  input_box.focus();
+  document.body.style.backgroundImage = 'url("./assets/Background-02.png")';
+  bot.reply("local-user", 'hot')
+  .then(function (reply) {
+    botReply(reply);
+  })
+  .then(function () {
+    message_container.lastElementChild.scrollIntoView();
+  });
+}
+
+function teaSelectExtraHot() {
+  console.log("tea temperature selected as Extra Hot");
+  input_box.focus();
+  document.body.style.backgroundImage = 'url("./assets/Background-03.png")';
+  bot.reply("local-user", 'extrahot')
+  .then(function (reply) {
+    botReply(reply);
+  })
+  .then(function () {
+    message_container.lastElementChild.scrollIntoView();
+  });
 }
