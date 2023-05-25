@@ -57,7 +57,7 @@
     ^ \n\n<span class="action">Earl Grey, Rooibos, Ginger and Lemon, English Breakfast, Lipton, PG Tips, Builder's Tea!</span>
 
     + earl grey
-    - Well done I can't believe you found it so fast. Although, I guess we should get back to the tea because otherwise it might get cold.
+    - Well done I can't believe you found it so fast. Although, I guess we should get back to the tea because otherwise it might get cold.{topic=temperature}
 < topic
 
 > topic botquestions
